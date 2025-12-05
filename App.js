@@ -1,7 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 
-export default function LandingMonetizable() {
-  // Contador animado
+export default function Page() {
   const [earnings, setEarnings] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,6 @@ export default function LandingMonetizable() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
 
-      {/* Header */}
       <header className="sticky top-0 bg-white shadow-sm z-50">
         <div className="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
           <h1 className="text-2xl font-bold">GanaFácil</h1>
@@ -34,6 +33,38 @@ export default function LandingMonetizable() {
             <a href="#plans" className="hover:text-blue-600">Planes</a>
             <a href="#testimonials" className="hover:text-blue-600">Opiniones</a>
           </nav>
+          <button className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700">
+            Ingresar
+          </button>
+        </div>
+      </header>
+
+      <section className="text-center py-24 px-6">
+        <h2 className="text-5xl font-extrabold leading-tight mb-6">
+          Genera Ingresos Automáticos  
+          <span className="text-blue-600"> desde Cualquier Lugar</span>
+        </h2>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+          Tu negocio digital funcionando 24/7 con ventas automatizadas.
+        </p>
+
+        <button className="px-8 py-4 bg-blue-600 text-white rounded-2xl text-xl hover:bg-blue-700 shadow-lg transition">
+          Comenzar Ahora
+        </button>
+
+        <div className="mt-12 text-3xl font-bold">
+          💸 Ganancias generadas por usuarios:  
+          <span className="text-green-600"> ${earnings.toLocaleString()}</span>
+        </div>
+      </section>
+
+      <footer className="py-8 bg-gray-900 text-center text-gray-300">
+        © 2025 GanaFácil — Todos los derechos reservados.
+      </footer>
+
+    </div>
+  );
+}
           <button className="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700">
             Ingresar
           </button>
